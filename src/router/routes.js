@@ -24,12 +24,26 @@ const routes = [
             component: () => import("pages/AuthPage.vue"),
             children: [
               {
-                path: "Login",
+                path: "login",
                 component: () => import("pages/auth/LoginSection.vue"),
               },
               {
                 path: "register",
                 component: () => import("pages/auth/RegisterSection.vue"),
+              },
+            ],
+          },
+          {
+            path: "/account",
+            component: () => import("pages/AccountPage.vue"),
+            children: [
+              {
+                path: "accountMenu",
+                component: () => import("pages/account/AccountMenu.vue"),
+              },
+              {
+                path: "details",
+                component: () => import("pages/account/My_Details.vue"),
               },
             ],
           },
